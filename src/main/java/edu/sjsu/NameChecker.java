@@ -13,7 +13,7 @@ public class NameChecker {
     public static boolean check(String input) {
         // TODO: implement
 
-        String regex = "^[a-zA-Z][a-zA-Z-']{2,40}$"
+        String regex = "^[a-zA-Z][a-zA-Z-']{2,40}$";
 
         Pattern pattern = Pattern.compile(regex);
         Matcher match = pattern.matcher(input);
