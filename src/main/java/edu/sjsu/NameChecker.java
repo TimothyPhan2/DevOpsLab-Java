@@ -17,9 +17,8 @@ public class NameChecker {
 
          if (Pattern.matches(regex, input)) {
            return Pattern.compile("'.*'|--").matcher(input).find() ? false : true;
-        } else {
-            return false;
-        }
+        } 
         return false;
     }
+    
 }
