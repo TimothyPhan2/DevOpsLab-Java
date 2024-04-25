@@ -15,10 +15,11 @@ public class NameChecker {
 
         String regex = "^[a-zA-Z][a-zA-Z-']{1,39}$";
 
-        Pattern pattern = Pattern.compile(regex);
-        Matcher match = pattern.matcher(input);
-
-    
-        return match.matches();
+         if (Pattern.matches(namex, input)) {
+           return Pattern.compile("'.*'|--").matcher(input).find() ? false : true;
+        } else {
+            return false;
+        }
+        return false;
     }
 }
