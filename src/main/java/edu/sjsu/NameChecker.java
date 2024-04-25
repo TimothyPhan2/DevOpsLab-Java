@@ -1,5 +1,5 @@
 package edu.sjsu;
-
+import java.util.regex.*;
 public class NameChecker {
     /**
      * Checks if a given string is a valid name following these rules:
@@ -13,6 +13,12 @@ public class NameChecker {
     public static boolean check(String input) {
         // TODO: implement
 
-        return false;
+        String regex = "^[a-zA-Z][a-zA-Z-']{2,40}$"
+
+        Pattern pattern = Pattern.compile(regex);
+        Matcher match = pattern.matcher(input);
+
+    
+        return match.matches();
     }
 }
